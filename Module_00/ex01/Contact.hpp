@@ -6,7 +6,7 @@
 /*   By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/09 17:24:45 by avaganay          #+#    #+#             */
-/*   Updated: 2023/06/10 15:30:14 by avaganay         ###   ########.fr       */
+/*   Updated: 2023/06/10 16:40:53 by avaganay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ public:
     ~Contact(void);
     void    contact_init(int i);
     void    contact_print(int id);
+    void    contact_print_search(int id);
     std::string  contact_print_len(std::string str);
 
 };

@@ -6,7 +6,7 @@
 /*   By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/09 13:38:43 by avaganay          #+#    #+#             */
-/*   Updated: 2023/06/10 16:33:23 by avaganay         ###   ########.fr       */
+/*   Updated: 2023/06/10 16:54:59 by avaganay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,12 +47,17 @@ void PhoneBook::add(void)
 int PhoneBook::contact_search()
 {
 	int	id;
+	int	work;
 
 	id = -1;
-	while ((id < atoi("1") || id > atoi("8")))
+	work = 1;
+	while (work)
 	{
+		std::cin.clear();
 		std::cout << "Search a contact between  1 and 8 :" << std::endl;
 		std::cin >> id;
+		if (id >= atoi("1") && id <= atoi("8"))
+			work = 0;
 	}
 	return (id - 1);
 }
@@ -76,5 +81,5 @@ void PhoneBook::search(void)
     }
     std::cout << std::endl;
 	id = contact_search();
-	// this->contact_lst[id].contact_print(id);
+	this->contact_lst[id].contact_print_search(id);
 }
