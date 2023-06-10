@@ -6,7 +6,7 @@
 /*   By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/09 13:35:04 by avaganay          #+#    #+#             */
-/*   Updated: 2023/06/09 17:18:13 by avaganay         ###   ########.fr       */
+/*   Updated: 2023/06/10 16:27:42 by avaganay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,15 @@ int main()
 		std::getline(std::cin, cmd);
         if (cmd == "EXIT")
         {
-            std::cout << " PhoneBook Close" << std::endl;
+            std::cout << "\033[32m" << " Phone Book Close" << "\033[0m" << std::endl;
             work = 0;
         }
-        if (cmd == "HELP")
+        else if (cmd == "HELP")
             PhoneBook.help();
+        else if (cmd == "ADD")
+            PhoneBook.add();
+        else if (cmd == "SEARCH")
+            PhoneBook.search();
         if (std::cin.eof() == 1)
             exit(1);
     }
