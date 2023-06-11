@@ -6,7 +6,7 @@
 /*   By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/11 13:07:54 by avaganay          #+#    #+#             */
-/*   Updated: 2023/06/11 15:15:41 by avaganay         ###   ########.fr       */
+/*   Updated: 2023/06/11 15:52:01 by avaganay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,11 @@ public:
     Zombie(std::string name);
     ~Zombie(void);
     void announce(void);
-
+    void init(std::string name);
+    Zombie* zombieHorde( int N, std::string name );
+    
 };
 
-Zombie *newZombie(std::string name);
-void randomChump(std::string name);
+Zombie* zombieHorde(int N, std::string name);
 
 #endif

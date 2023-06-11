@@ -6,7 +6,7 @@
 #    By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/11 12:31:36 by avaganay          #+#    #+#              #
-#    Updated: 2023/06/11 15:10:51 by avaganay         ###   ########.fr        #
+#    Updated: 2023/06/11 15:14:35 by avaganay         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ RM			= rm -rf
 
 OBJDIR = .objFiles
 
-FILES		= main Zombie newZombie randomChump
+FILES		= main Zombie zombieHorde
 
 SRC			= $(FILES:=.cpp)
 OBJ			= $(addprefix $(OBJDIR)/, $(FILES:=.o))
