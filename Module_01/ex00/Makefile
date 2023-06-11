@@ -5,12 +5,12 @@
 #                                                     +:+ +:+         +:+      #
 #    By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/06/09 13:34:38 by avaganay          #+#    #+#              #
-#    Updated: 2023/06/11 12:30:51 by avaganay         ###   ########.fr        #
+#    Created: 2023/06/11 12:31:36 by avaganay          #+#    #+#              #
+#    Updated: 2023/06/11 14:31:23 by avaganay         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= PhoneBook
+NAME		= Zombie
 	
 CC			= c++
 FLAGS		= -Wall -Wextra -Werror
@@ -18,13 +18,12 @@ RM			= rm -rf
 
 OBJDIR = .objFiles
 
-FILES		= main PhoneBook Contact
+FILES		= main Zombie
 
 SRC			= $(FILES:=.cpp)
 OBJ			= $(addprefix $(OBJDIR)/, $(FILES:=.o))
-HEADER		= PhoneBook.hpp PhoneBook
+HEADER		= Zombie.hpp
 
-#Colors:
 GREEN		=	\e[92;5;118m
 YELLOW		=	\e[93;5;226m
 GRAY		=	\e[33;2;37m
@@ -37,7 +36,7 @@ all: $(NAME)
 
 $(NAME): $(OBJ) $(HEADER)
 	@$(CC) $(OBJ) $(OPTS) -o $(NAME)
-	@printf "$(_SUCCESS)$(GREEN)PhoneBook ready\n$(RESET)"
+	@printf "$(_SUCCESS)$(GREEN)Zombie ready\n$(RESET)"
 
 $(OBJDIR)/%.o: %.cpp $(HEADER)
 	@mkdir -p $(dir $@)

@@ -6,7 +6,7 @@
 #    By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/11 11:02:05 by avaganay          #+#    #+#              #
-#    Updated: 2023/06/11 11:03:03 by avaganay         ###   ########.fr        #
+#    Updated: 2023/06/11 12:27:15 by avaganay         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ CURSIVE		=	\e[33;3m
 
 all: $(NAME)
 
-$(NAME): 
+$(NAME): $(OBJECTS)
 	@ $(CC) $(FLAGS) megaphone.cpp -o $(NAME)
 	@printf "$(GREEN)    Megaphone ready\n$(RESET)"
 
