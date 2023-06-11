@@ -6,7 +6,7 @@
 /*   By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/09 13:38:43 by avaganay          #+#    #+#             */
-/*   Updated: 2023/06/10 16:54:59 by avaganay         ###   ########.fr       */
+/*   Updated: 2023/06/11 11:33:51 by avaganay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,11 +53,15 @@ int PhoneBook::contact_search()
 	work = 1;
 	while (work)
 	{
-		std::cin.clear();
 		std::cout << "Search a contact between  1 and 8 :" << std::endl;
 		std::cin >> id;
 		if (id >= atoi("1") && id <= atoi("8"))
 			work = 0;
+		else
+		{
+			std::cin.clear();
+			std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
+		}
 	}
 	return (id - 1);
 }

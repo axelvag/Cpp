@@ -6,7 +6,7 @@
 /*   By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/09 17:23:53 by avaganay          #+#    #+#             */
-/*   Updated: 2023/06/10 16:56:59 by avaganay         ###   ########.fr       */
+/*   Updated: 2023/06/11 11:29:13 by avaganay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,12 +56,14 @@ void    Contact::contact_print(int id)
 void    Contact::contact_print_search(int id)
 {
     if (this->first_name.empty())
+    {
+        std::cout << " Number of contact is non-existant " << std::endl;
         return ;
+    }
     std::cout << "\033[34m" << "Number : " << "\033[0m" << id + 1 << "\033[34m" << std::endl;
-    std::cout << "Fisrt Name : " << "\033[0m" << this->first_name << "\033[34m" << std::endl;
     std::cout << "Fisrt Name : " << "\033[0m" << this->first_name << "\033[34m" << std::endl;
     std::cout << "Last Name : " << "\033[0m" << this->last_name << "\033[34m" << std::endl;
     std::cout << "Nickname : " << "\033[0m" << this->nickname << "\033[34m" << std::endl;
     std::cout << "Phone Number : " << "\033[0m" << this->phone_nb << "\033[34m" << std::endl;
-    std::cout << "Darkest Secret : " << "\033[0m" << this->first_name << std::endl;
+    std::cout << "Darkest Secret : " << "\033[0m" << this->darkest_secret << std::endl;
 }
