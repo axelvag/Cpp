@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+        */
+/*   By: axel <axel@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/11 13:07:28 by avaganay          #+#    #+#             */
-/*   Updated: 2023/06/11 15:32:42 by avaganay         ###   ########.fr       */
+/*   Updated: 2023/06/11 20:23:06 by axel             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,12 @@
 Zombie::Zombie(std::string name)
 {
     this->name = name;
+}
+
+Zombie::Zombie(void)
+{
+    this->name = "(null)";
+	std::cout << "Zombie object " << this->name << " created" << std::endl;
 }
 
 Zombie::~Zombie(void)
