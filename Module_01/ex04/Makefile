@@ -6,11 +6,11 @@
 #    By: axel <axel@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/11 12:31:36 by avaganay          #+#    #+#              #
-#    Updated: 2023/07/10 12:33:48 by axel             ###   ########.fr        #
+#    Updated: 2023/07/10 17:03:45 by axel             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= Violence
+NAME		= Sed
 	
 CC			= c++
 FLAGS		= -Wall -Wextra -Werror
@@ -18,11 +18,11 @@ RM			= rm -rf
 
 OBJDIR = .objFiles
 
-FILES		= main Weapon HumanA
+FILES		= main
 
 SRC			= $(FILES:=.cpp)
 OBJ			= $(addprefix $(OBJDIR)/, $(FILES:=.o))
-HEADER		= Weapon.hpp HumanA.hpp
+HEADER		= 
 
 GREEN		=	\e[92;5;118m
 YELLOW		=	\e[93;5;226m
@@ -36,7 +36,7 @@ all: $(NAME)
 
 $(NAME): $(OBJ) $(HEADER)
 	@$(CC) $(OBJ) $(OPTS) -o $(NAME)
-	@printf "$(_SUCCESS)$(GREEN)Violence ready\n$(RESET)"
+	@printf "$(_SUCCESS)$(GREEN)Sed File Traitement ready\n$(RESET)"
 
 $(OBJDIR)/%.o: %.cpp $(HEADER)
 	@mkdir -p $(dir $@)
