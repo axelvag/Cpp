@@ -6,17 +6,18 @@
 /*   By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/31 13:37:28 by avaganay          #+#    #+#             */
-/*   Updated: 2023/07/31 13:37:44 by avaganay         ###   ########.fr       */
+/*   Updated: 2023/07/31 14:30:13 by avaganay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
+#include "../include/Fixed.hpp"
 
 int main( void )
 {
-    // Fixed a;
-    // Fixed b( a );
-    // Fixed c;
+    Fixed a;
+    Fixed b( a );
+    Fixed c;
     
     // c = b;
     // std::cout << a.getRawBits() << std::endl;
