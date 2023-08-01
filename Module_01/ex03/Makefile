@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: axel <axel@student.42.fr>                  +#+  +:+       +#+         #
+#    By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/11 12:31:36 by avaganay          #+#    #+#              #
-#    Updated: 2023/07/10 12:33:48 by axel             ###   ########.fr        #
+#    Updated: 2023/08/01 15:32:37 by avaganay         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,11 +18,11 @@ RM			= rm -rf
 
 OBJDIR = .objFiles
 
-FILES		= main Weapon HumanA
+FILES		= main Weapon HumanA HumanB
 
 SRC			= $(FILES:=.cpp)
 OBJ			= $(addprefix $(OBJDIR)/, $(FILES:=.o))
-HEADER		= Weapon.hpp HumanA.hpp
+HEADER		= Weapon.hpp HumanA.hpp HumanB.hpp
 
 GREEN		=	\e[92;5;118m
 YELLOW		=	\e[93;5;226m

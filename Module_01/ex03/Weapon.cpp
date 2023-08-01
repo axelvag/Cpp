@@ -3,25 +3,30 @@
 /*                                                        :::      ::::::::   */
 /*   Weapon.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: axel <axel@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/13 22:22:02 by axel              #+#    #+#             */
-/*   Updated: 2023/07/10 11:16:42 by axel             ###   ########.fr       */
+/*   Updated: 2023/08/01 15:29:01 by avaganay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Weapon.hpp"
 
+Weapon::Weapon()
+{
+    
+}
+
 Weapon::Weapon(std::string type)
 {
-    (void)type;
+    this->type = type;
 }
 
 Weapon::~Weapon(void)
 {
 }
 
-const std::string& Weapon::getType(void)
+const std::string &Weapon::getType(void)
 {
     return (this->type);
 }
