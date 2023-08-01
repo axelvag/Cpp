@@ -6,7 +6,7 @@
 /*   By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/01 15:31:12 by avaganay          #+#    #+#             */
-/*   Updated: 2023/08/01 15:32:19 by avaganay         ###   ########.fr       */
+/*   Updated: 2023/08/01 16:06:34 by avaganay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ class HumanB
 {
 private:
     std::string name;
-    Weapon weaponB;
+    Weapon *weaponB;
 public:
     HumanB(std::string name);
     ~HumanB();
