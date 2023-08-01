@@ -6,7 +6,7 @@
 /*   By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/31 13:37:28 by avaganay          #+#    #+#             */
-/*   Updated: 2023/07/31 14:30:13 by avaganay         ###   ########.fr       */
+/*   Updated: 2023/08/01 11:02:24 by avaganay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int main( void )
     Fixed b( a );
     Fixed c;
     
-    // c = b;
+    c = b;
     // std::cout << a.getRawBits() << std::endl;
     // std::cout << b.getRawBits() << std::endl;
     // std::cout << c.getRawBits() << std::endl;
