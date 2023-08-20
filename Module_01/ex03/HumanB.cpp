@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+        */
+/*   By: axel <axel@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/10 12:31:44 by axel              #+#    #+#             */
-/*   Updated: 2023/08/01 15:52:05 by avaganay         ###   ########.fr       */
+/*   Updated: 2023/08/02 20:19:00 by axel             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,4 +21,17 @@ HumanB::HumanB(std::string name)
 
 HumanB::~HumanB(void)
 {
+}
+
+void    HumanB::setWeapon(Weapon club)
+{
+    this->weaponB = &club;
+}
+
+void	HumanB::attack(void) const
+{
+    if (this->weaponB == NULL)
+	    std::cout << this->name << " attacks with nothing" << std::endl;
+    else
+	    std::cout << this->name << " attacks with his " << this->weaponB->getType() << std::endl;
 }

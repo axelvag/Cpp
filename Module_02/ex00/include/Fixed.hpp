@@ -3,12 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+        */
+/*   By: axel <axel@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/31 13:59:28 by avaganay          #+#    #+#             */
-/*   Updated: 2023/08/01 11:05:05 by avaganay         ###   ########.fr       */
+/*   Updated: 2023/08/04 19:47:32 by axel             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef FIXED_HPP
+#define FIXED_HPP
 
 #include <iostream>
 
@@ -24,5 +27,7 @@ public:
     Fixed(const Fixed &copy);
     Fixed &operator=(const Fixed &assignment);
     int getRawBits(void) const;
+    void setRawBits(int const raw);
 };
 
+#endif

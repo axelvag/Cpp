@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Harl.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+        */
+/*   By: axel <axel@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/18 19:40:47 by axel              #+#    #+#             */
-/*   Updated: 2023/07/31 13:20:50 by avaganay         ###   ########.fr       */
+/*   Updated: 2023/08/03 10:12:08 by axel             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,17 +53,17 @@ void    Harl::complain(std::string statue)
 	}
     switch (i)
     {
-    case 0:
-        (this->*choose_tab[0])();
-    case 1:
-        (this->*choose_tab[1])();
-    case 2:
-        (this->*choose_tab[2])();
-    case 3:
-        (this->*choose_tab[3])();
-        break;
-    default:
-        std::cout << "Error doesn't exist Harl is happy" << std::endl;
-        break;
+        case 0:
+            (this->*choose_tab[0])();
+        case 1:
+            (this->*choose_tab[1])();
+        case 2:
+            (this->*choose_tab[2])();
+        case 3:
+            (this->*choose_tab[3])();
+            break;
+        default:
+            std::cout << "Error doesn't exist Harl is happy" << std::endl;
+            break;
     }
 }
