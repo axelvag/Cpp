@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: axel <axel@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/05 12:44:15 by axel              #+#    #+#             */
-/*   Updated: 2023/08/06 11:26:43 by axel             ###   ########.fr       */
+/*   Updated: 2023/08/21 17:02:04 by avaganay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ protected:
     std::string type;
 public:
     Animal(void);
-    ~Animal();
+     ~Animal();
     Animal(const Animal &copy);
     Animal &operator=(const Animal &assignment);
-    void    makeSound(void) const;
+     void    makeSound(void) const;                    //virtual
     const std::string   &getType(void) const;
 };
 

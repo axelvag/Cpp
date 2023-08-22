@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: axel <axel@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/10 12:31:44 by axel              #+#    #+#             */
-/*   Updated: 2023/08/02 20:19:00 by axel             ###   ########.fr       */
+/*   Updated: 2023/08/21 14:03:17 by avaganay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ HumanB::~HumanB(void)
 {
 }
 
-void    HumanB::setWeapon(Weapon club)
+void    HumanB::setWeapon(Weapon &club)
 {
     this->weaponB = &club;
 }

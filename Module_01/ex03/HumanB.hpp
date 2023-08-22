@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   HumanB.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: axel <axel@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/01 15:31:12 by avaganay          #+#    #+#             */
-/*   Updated: 2023/08/02 20:17:22 by axel             ###   ########.fr       */
+/*   Updated: 2023/08/21 14:03:25 by avaganay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ private:
 public:
     HumanB(std::string name);
     ~HumanB();
-    void    setWeapon(Weapon club);
+    void    setWeapon(Weapon &club);
     void	attack(void) const;
 };
 

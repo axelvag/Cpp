@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: axel <axel@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/31 13:59:28 by avaganay          #+#    #+#             */
-/*   Updated: 2023/08/04 19:48:25 by axel             ###   ########.fr       */
+/*   Updated: 2023/08/22 16:09:06 by avaganay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ public:
     void setRawBits(int const raw);
     float toFloat(void) const;
     int toInt(void) const;
-    // std::ostream &operator<<(std::ostream &out, Fixed const &fixed);
 
     bool    operator>(Fixed fixed) const;
     bool    operator<(Fixed fixed) const;
@@ -48,12 +47,16 @@ public:
     float    operator/(Fixed fixed) const;
 
     Fixed   operator++();
+    Fixed   operator++(int);
     Fixed   operator--();
+    Fixed   operator--(int);
 
-    Fixed &min(Fixed &left, Fixed &right);
-    const Fixed &min(const Fixed &left, const Fixed &right);
-    Fixed &max(Fixed &left, Fixed &right);
-    const Fixed &max(const Fixed &left, const Fixed &right);
+    static Fixed &min(Fixed &left, Fixed &right);
+    static const Fixed &min(const Fixed &left, const Fixed &right);
+    static Fixed &max(Fixed &left, Fixed &right);
+    static const Fixed &max(const Fixed &left, const Fixed &right);
 };
+
+std::ostream &operator<<(std::ostream &out, Fixed const &fixed);
 
 #endif

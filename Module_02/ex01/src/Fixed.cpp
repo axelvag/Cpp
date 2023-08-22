@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: axel <axel@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/31 13:59:33 by avaganay          #+#    #+#             */
-/*   Updated: 2023/08/03 12:32:51 by axel             ###   ########.fr       */
+/*   Updated: 2023/08/22 15:26:58 by avaganay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,30 +14,36 @@
 
 Fixed::Fixed(void)
 {
+    std::cout << "Default constructor called" << std::endl;
     integer = 0;
 }
 
 Fixed::Fixed(const int convert)
 {
+    std::cout << "Int constructor called" << std::endl;
     this->integer = convert << this->nb_of_bit;
 }
 
 Fixed::Fixed(const float convert)
 {
+    std::cout << "Float constructor called" << std::endl;
     this->integer = roundf(convert * (1 << this->nb_of_bit));
 }
 
 Fixed::Fixed(const Fixed &copy)
 {
-    integer = copy.integer;
+    std::cout << "Copy constructor called" << std::endl;
+    *this = copy;
 }
 
 Fixed::~Fixed(void)
 {
+    std::cout << "Destructor called" << std::endl;
 }
 
 Fixed &Fixed::operator=(const Fixed &assignment)
 {
+    std::cout << "Copy assignment operator called" << std::endl;
 	this->integer = assignment.integer;
 	return *this;
 }
@@ -54,7 +60,7 @@ void Fixed::setRawBits(int const raw)
 
 float Fixed::toFloat(void) const
 {
-    return ((float)this->integer / (float)(1 >> this->nb_of_bit));
+    return ((float)this->integer / (1 << this->nb_of_bit));
 }
 
 int Fixed::toInt(void) const
@@ -62,7 +68,7 @@ int Fixed::toInt(void) const
     return(this->integer >> this->nb_of_bit);
 }
 
-std::ostream &operator<<(std::ostream &out, Fixed const &fixed)
+std::ostream &operator<<(std::ostream &out, const Fixed &fixed)
 {
     out << fixed.toFloat();
     return (out);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: axel <axel@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/31 13:59:33 by avaganay          #+#    #+#             */
-/*   Updated: 2023/08/15 19:53:09 by axel             ###   ########.fr       */
+/*   Updated: 2023/08/22 16:12:20 by avaganay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 Fixed::Fixed(void)
 {
-    integer = 0;
+    this->integer = 0;
+    return ;
 }
 
 Fixed::Fixed(const int convert)
@@ -54,7 +55,7 @@ void Fixed::setRawBits(int const raw)
 
 float Fixed::toFloat(void) const
 {
-    return ((float)this->integer / (float)(1 >> this->nb_of_bit));
+    return ((float)this->integer / (1 << this->nb_of_bit));
 }
 
 int Fixed::toInt(void) const
@@ -62,11 +63,11 @@ int Fixed::toInt(void) const
     return(this->integer >> this->nb_of_bit);
 }
 
-// std::ostream &operator<<(std::ostream &out, Fixed const &fixed)
-// {
-//     out << fixed.toFloat();
-//     return (out);
-// }
+std::ostream &operator<<(std::ostream &out, Fixed const &fixed)
+{
+    out << fixed.toFloat();
+    return (out);
+}
 
 bool    Fixed::operator>(Fixed fixed) const
 {
@@ -124,10 +125,24 @@ Fixed   Fixed::operator++()
     return (*this);
 }
 
+Fixed   Fixed::operator++(int)
+{
+    Fixed tmp(*this);
+    operator++();
+    return (tmp);
+}
+
 Fixed   Fixed::operator--()
 {
     this->integer--;
     return (*this);
+}
+
+Fixed   Fixed::operator--(int)
+{
+    Fixed tmp(*this);
+    operator--();
+    return (tmp);
 }
 
 Fixed &Fixed::min(Fixed &left, Fixed &right)

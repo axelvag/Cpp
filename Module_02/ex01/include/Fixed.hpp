@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: axel <axel@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/31 13:59:28 by avaganay          #+#    #+#             */
-/*   Updated: 2023/08/04 19:47:59 by axel             ###   ########.fr       */
+/*   Updated: 2023/08/22 13:27:37 by avaganay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,8 @@ public:
     void setRawBits(int const raw);
     float toFloat(void) const;
     int toInt(void) const;
-    std::ostream &operator<<(std::ostream &out, Fixed const &fixed);
 };
+
+std::ostream &operator<<(std::ostream &out, const Fixed &fixed);
 
 #endif

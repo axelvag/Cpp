@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: axel <axel@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/31 13:59:33 by avaganay          #+#    #+#             */
-/*   Updated: 2023/08/03 12:42:23 by axel             ###   ########.fr       */
+/*   Updated: 2023/08/22 10:40:26 by avaganay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,9 @@ Fixed &Fixed::operator=(const Fixed &assignment)
 {
     std::cout << "Copy assignment operator called" << std::endl;
     if (this != &assignment)
+    {
         this->integer = assignment.getRawBits();
-    // else
-	    // this->integer = assignment.integer;
+    }
 	return *this;
 }
 
