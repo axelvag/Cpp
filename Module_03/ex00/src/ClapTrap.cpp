@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: axel <axel@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/31 13:59:33 by avaganay          #+#    #+#             */
-/*   Updated: 2023/08/04 19:30:03 by axel             ###   ########.fr       */
+/*   Updated: 2023/08/23 13:57:47 by avaganay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,17 +34,17 @@ ClapTrap::ClapTrap(const ClapTrap &copy)
 
 ClapTrap::~ClapTrap(void)
 {
-    std::cout << "Destructor called" << std::endl;
+    std::cout << "Destructor ClapTrap called" << std::endl;
 }
 
 ClapTrap &ClapTrap::operator=(const ClapTrap &assignment)
 {
     std::cout << "Copy assignment operator called" << std::endl;
-    (void)assignment;
-    // if (this != &assignment)
-    //     this->integer = assignment.getRawBits();
-	// std::cout << assignment << std::endl;
-    return *this;
+    this->_name = assignment._name;
+    this->_hit = assignment._hit;
+    this->_energy = assignment._energy;
+    this->_attack = assignment._attack;
+    return (*this);
 }
 
 // std::ostream &operator<<(std::ostream &out, const ClapTrap &claptrap)

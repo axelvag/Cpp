@@ -6,7 +6,7 @@
 /*   By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/31 13:37:28 by avaganay          #+#    #+#             */
-/*   Updated: 2023/08/22 16:20:39 by avaganay         ###   ########.fr       */
+/*   Updated: 2023/08/23 09:02:56 by avaganay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,12 @@ int main( void )
     std::cout << a << std::endl;
 
     std::cout << b << std::endl;
+
+    std::cout << std::endl;
+    std::cout << "b / 2 :" << b / Fixed(2) << std::endl; // 5.05078
+	std::cout << "b - 3.14 :" << b + Fixed(-3.14f) << std::endl; // 6.96094
+	std::cout << "c != a :" << (c != a) << std::endl; // 1
+	std::cout << "c == a :" << (c == a) << std::endl; // 0
 
     std::cout << std::endl;
     std::cout << "Max :" << Fixed::max( a, b ) << std::endl;
