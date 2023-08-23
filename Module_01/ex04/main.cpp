@@ -6,7 +6,7 @@
 /*   By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/10 16:55:29 by axel              #+#    #+#             */
-/*   Updated: 2023/08/22 10:23:36 by avaganay         ###   ########.fr       */
+/*   Updated: 2023/08/23 11:24:01 by avaganay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,13 @@ void	ft_replace(std::string file, std::string s1, std::string s2)
 	std::string		tmp;
 
 	old_file.open(file.c_str(), std::ios::in);
+	if (!old_file)
+	{
+		std::cout << "A file could not be opened" << std::endl;
+		return ;
+	}
 	new_file.open(std::string(file + ".replace").c_str(), std::ios::out);
-	if (!old_file || !new_file)
+	if (!new_file)
 	{
 		std::cout << "A file could not be opened" << std::endl;
 		return ;

@@ -6,7 +6,7 @@
 /*   By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/18 19:40:47 by axel              #+#    #+#             */
-/*   Updated: 2023/08/21 16:51:44 by avaganay         ###   ########.fr       */
+/*   Updated: 2023/08/23 11:29:45 by avaganay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,15 +40,17 @@ void    Harl::error(void)
     std::cout << "\033[31m" << "Error" << "\033[0m" << ", this is unacceptable ! I want to speak to the manager now." << std::endl;
 }
 
-void    Harl::complain(std::string statue)
+void    Harl::complain(std::string status)
 {
     void (Harl::*choose_tab[4])(void) = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
-    if (statue == "DEBUG")
-        return (this->*choose_tab[0])();
-    else if (statue == "INFO")
-        return (this->*choose_tab[1])();
-    else if (statue == "WARNING")
-        return (this->*choose_tab[2])();
-    else if (statue == "ERROR")
-        return (this->*choose_tab[3])();
+    std::string all_status[4] = { "DEBUG" , "INFO" , "WARNING", "ERROR"}; 
+    int i;
+
+    i = 0;
+    while (i < 4)
+    {
+        if (status == all_status[i])
+            (this->*choose_tab[i])();
+        i++;
+    }
 }

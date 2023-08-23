@@ -6,7 +6,7 @@
 /*   By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/11 13:07:28 by avaganay          #+#    #+#             */
-/*   Updated: 2023/06/13 16:52:25 by avaganay         ###   ########.fr       */
+/*   Updated: 2023/08/23 12:40:23 by avaganay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,7 @@ Zombie::Zombie(std::string name)
 
 Zombie::Zombie(void)
 {
-    this->name = "(null)";
-	std::cout << "Zombie object " << this->name << " created" << std::endl;
+	std::cout << "Zombie object created" << std::endl;
 }
 
 Zombie::~Zombie(void)
