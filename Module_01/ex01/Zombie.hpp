@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: axel <axel@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/11 13:07:54 by avaganay          #+#    #+#             */
-/*   Updated: 2023/06/11 20:23:39 by axel             ###   ########.fr       */
+/*   Updated: 2023/08/23 08:31:54 by avaganay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ public:
     ~Zombie(void);
     void announce(void);
     void init(std::string name);
-    Zombie* zombieHorde( int N, std::string name );
     
 };
 
