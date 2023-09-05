@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: axel <axel@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/05 14:34:21 by axel              #+#    #+#             */
-/*   Updated: 2023/08/05 14:44:20 by axel             ###   ########.fr       */
+/*   Updated: 2023/08/28 09:34:49 by avaganay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ public:
     Dog(void);
     Dog(const Dog &copy);
     ~Dog(void);
-    void    makeSound(void);
+    void    makeSound(void) const;
 };
 
 #endif

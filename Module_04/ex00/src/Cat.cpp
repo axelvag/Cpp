@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: axel <axel@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/05 14:36:35 by axel              #+#    #+#             */
-/*   Updated: 2023/08/05 18:39:23 by axel             ###   ########.fr       */
+/*   Updated: 2023/08/28 09:29:39 by avaganay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ Cat::~Cat(void)
     std::cout << "Destructor Cat called" << std::endl;
 }
 
-void    Cat::makeSound(void)
+void    Cat::makeSound(void) const
 {
     std::cout << "MIAOU !!!" << std::endl;
 }

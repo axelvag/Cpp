@@ -6,7 +6,7 @@
 /*   By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/05 12:44:15 by axel              #+#    #+#             */
-/*   Updated: 2023/08/21 17:02:04 by avaganay         ###   ########.fr       */
+/*   Updated: 2023/08/28 09:34:43 by avaganay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ protected:
     std::string type;
 public:
     Animal(void);
-     ~Animal();
+    virtual ~Animal();
     Animal(const Animal &copy);
     Animal &operator=(const Animal &assignment);
-     void    makeSound(void) const;                    //virtual
+    virtual void    makeSound(void) const;
     const std::string   &getType(void) const;
 };
 

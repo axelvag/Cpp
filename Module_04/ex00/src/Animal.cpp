@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: axel <axel@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/05 12:43:21 by axel              #+#    #+#             */
-/*   Updated: 2023/08/06 11:26:27 by axel             ###   ########.fr       */
+/*   Updated: 2023/08/29 13:20:23 by avaganay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,9 @@ Animal::~Animal(void)
 Animal &Animal::operator=(const Animal &assignment)
 {
     std::cout << "Copy assignment operator called" << std::endl;
-    (void)assignment;
-    // if (this != &assignment)
-    //     this->integer = assignment.getRawBits();
-	// std::cout << assignment << std::endl;
+    if (this == &assignment)
+        return (*this);
+    this->type = assignment.type;
     return *this;
 }
 

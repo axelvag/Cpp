@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: axel <axel@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/31 13:37:28 by avaganay          #+#    #+#             */
-/*   Updated: 2023/08/06 11:27:20 by axel             ###   ########.fr       */
+/*   Updated: 2023/08/28 13:45:08 by avaganay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,34 @@
 #include "../include/Animal.hpp"
 #include "../include/Dog.hpp"
 #include "../include/Cat.hpp"
+#include "../include/WrongAnimal.hpp"
+#include "../include/WrongCat.hpp"
 
 int main( void )
 {
-    const Animal* meta = new Animal();
-    const Animal* j = new Dog();
-    const Animal* i = new Cat();
+    const Animal* animal = new Animal();
+    const Animal* dog = new Dog();
+    const Animal* cat = new Cat();
     
-    (void)meta;
-    (void)j;
-    std::cout << j->getType() << " " << std::endl;
-    std::cout << i->getType() << " " << std::endl;
-    i->makeSound(); //will output the cat sound! j->makeSound();
-    meta->makeSound();
-    delete meta;
-    delete j;
-    delete i;
+    std::cout << dog->getType() << " " << std::endl;
+    std::cout << cat->getType() << " " << std::endl;
+    dog->makeSound();
+    cat->makeSound();
+    animal->makeSound();
+	std::cout << std::endl;
+
+    const WrongAnimal* wrong_animal = new WrongAnimal();
+	const WrongAnimal* wrong_cat = new WrongCat();
+
+	std::cout << std::endl;
+	wrong_cat->makeSound();
+	wrong_animal->makeSound();
+
+	std::cout << std::endl;
+	delete animal;
+	delete dog;
+	delete cat;
+	delete wrong_cat;
+	delete wrong_animal;
     return 0;
 }

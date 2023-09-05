@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: axel <axel@student.42.fr>                  +#+  +:+       +#+         #
+#    By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/31 13:58:55 by avaganay          #+#    #+#              #
-#    Updated: 2023/08/05 18:38:45 by axel             ###   ########.fr        #
+#    Updated: 2023/08/28 09:13:21 by avaganay         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,11 +20,11 @@ RM						=	rm -rf
 BUILD_DIR				= 	build/
 
 INCLUDE_DIR					=	include
-INCLUDE_FILE				= 	Animal Dog Cat
+INCLUDE_FILE				= 	Animal Dog Cat WrongAnimal WrongCat
 INC						= 	$(addsuffix .hpp, $(addprefix $(INCLUDE_DIR)/, $(INCLUDE_FILE)))
 
 SRC_DIR				=	src
-SRC_FILE				=	main Animal Dog Cat
+SRC_FILE				=	main Animal Dog Cat WrongAnimal WrongCat
 SRC					=  	$(addsuffix .cpp, $(addprefix $(SRC_DIR)/, $(SRC_FILE)))
 
 OBJS			    	= 	$(SRC:%.cpp=$(BUILD_DIR)%.o)
