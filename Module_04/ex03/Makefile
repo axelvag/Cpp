@@ -6,7 +6,7 @@
 #    By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/31 13:58:55 by avaganay          #+#    #+#              #
-#    Updated: 2023/09/05 15:12:37 by avaganay         ###   ########.fr        #
+#    Updated: 2023/09/07 12:28:23 by avaganay         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,11 +20,11 @@ RM						=	rm -rf
 BUILD_DIR				= 	build/
 
 INCLUDE_DIR					=	include
-INCLUDE_FILE				= 	ICharacter AMateria Cure Ice Character
+INCLUDE_FILE				= 	ICharacter AMateria Cure Ice Character IMateriaSource MateriaSource
 INC						= 	$(addsuffix .hpp, $(addprefix $(INCLUDE_DIR)/, $(INCLUDE_FILE)))
 
 SRC_DIR				=	src
-SRC_FILE				=	main AMateria Cure Ice Character
+SRC_FILE				=	main AMateria Cure Ice Character MateriaSource
 SRC					=  	$(addsuffix .cpp, $(addprefix $(SRC_DIR)/, $(SRC_FILE)))
 
 OBJS			    	= 	$(SRC:%.cpp=$(BUILD_DIR)%.o)

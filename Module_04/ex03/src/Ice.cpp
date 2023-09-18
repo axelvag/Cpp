@@ -6,7 +6,7 @@
 /*   By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/05 14:36:35 by axel              #+#    #+#             */
-/*   Updated: 2023/09/05 16:27:30 by avaganay         ###   ########.fr       */
+/*   Updated: 2023/09/18 13:47:26 by avaganay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,12 @@ Ice::Ice(const Ice &copy)
 Ice::~Ice(void)
 {
     std::cout << "Destructor Ice called" << std::endl;
+}
+
+Ice &Ice::operator=(const Ice &assignment)
+{
+	std::cout << "Assigned from " << assignment.getType() << std::endl;
+	return (*this);
 }
 
 AMateria* Ice::clone() const

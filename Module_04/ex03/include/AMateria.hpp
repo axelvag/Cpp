@@ -18,12 +18,14 @@
 #include "ICharacter.hpp"
 
 class ICharacter;
+class MateriaSource;
 
 class AMateria
 {
     
 protected:
     std::string _type;
+    MateriaSource *materia_source_;
 
 public:
     AMateria(void);
@@ -33,6 +35,8 @@ public:
     std::string const & getType() const;
     virtual AMateria* clone() const = 0;
     virtual void use(ICharacter& target);
+
+    void setMateriaSource(MateriaSource *new_materia_source);
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 13:14:27 by avaganay          #+#    #+#             */
-/*   Updated: 2023/09/05 16:23:34 by avaganay         ###   ########.fr       */
+/*   Updated: 2023/09/18 14:08:57 by avaganay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ public:
 	virtual void equip(AMateria* m) = 0;
 	virtual void unequip(int idx) = 0;
 	virtual void use(int idx, ICharacter& target) = 0;
+	virtual void    printInventory(void) = 0;
+	virtual void    printFall(void) = 0;
 };
 
 #endif

@@ -29,6 +29,12 @@ Cure::~Cure(void)
     std::cout << "Destructor Cure called" << std::endl;
 }
 
+Cure &Cure::operator=(const Cure &assignment)
+{
+	std::cout << "Assigned from " << assignment.getType() << std::endl;
+	return (*this);
+}
+
 AMateria* Cure::clone() const
 {
     return (new Cure);

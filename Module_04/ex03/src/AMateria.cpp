@@ -48,3 +48,7 @@ void AMateria::use(ICharacter &target)
     (void)target;
     return ;
 }
+
+void AMateria::setMateriaSource(MateriaSource *new_materia_source) {
+  this->materia_source_ = new_materia_source;
+}
