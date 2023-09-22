@@ -6,7 +6,7 @@
 /*   By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 12:26:23 by avaganay          #+#    #+#             */
-/*   Updated: 2023/09/22 13:56:32 by avaganay         ###   ########.fr       */
+/*   Updated: 2023/09/22 14:07:32 by avaganay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,14 @@ class RobotomyRequestForm : public Form
 {
 
 private:
-
+    std::string		_target;
 
 public:
+    RobotomyRequestForm();
+    RobotomyRequestForm(std::string target);
+    RobotomyRequestForm(RobotomyRequestForm const &copy);
+    ~RobotomyRequestForm();
+    RobotomyRequestForm &operator=(const RobotomyRequestForm &assignment);
 
 };
 
