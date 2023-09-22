@@ -6,7 +6,8 @@
 /*   By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 12:26:26 by avaganay          #+#    #+#             */
-/*   Updated: 2023/09/22 12:26:27 by avaganay         ###   ########.fr       */
+/*   Updated: 2023/09/22 13:43:35 by avaganay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../include/RobotomyRequestForm.hpp"

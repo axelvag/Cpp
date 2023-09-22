@@ -6,7 +6,7 @@
 #    By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/31 13:58:55 by avaganay          #+#    #+#              #
-#    Updated: 2023/09/22 10:25:44 by avaganay         ###   ########.fr        #
+#    Updated: 2023/09/22 13:55:47 by avaganay         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,11 +20,11 @@ RM						=	rm -rf
 BUILD_DIR				= 	build/
 
 INCLUDE_DIR					=	include
-INCLUDE_FILE				= 	Bureaucrat Form
+INCLUDE_FILE				= 	Bureaucrat AForm ShrubberyCreationForm RobotomyRequestForm PresidentialPardonForm
 INC						= 	$(addsuffix .hpp, $(addprefix $(INCLUDE_DIR)/, $(INCLUDE_FILE)))
 
 SRC_DIR				=	src
-SRC_FILE				=	main Bureaucrat Form
+SRC_FILE				=	main Bureaucrat AForm ShrubberyCreationForm RobotomyRequestForm PresidentialPardonForm
 SRC					=  	$(addsuffix .cpp, $(addprefix $(SRC_DIR)/, $(SRC_FILE)))
 
 OBJS			    	= 	$(SRC:%.cpp=$(BUILD_DIR)%.o)

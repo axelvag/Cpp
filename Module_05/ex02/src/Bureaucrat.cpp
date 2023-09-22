@@ -6,12 +6,12 @@
 /*   By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/06 11:34:27 by axel              #+#    #+#             */
-/*   Updated: 2023/09/22 11:24:19 by avaganay         ###   ########.fr       */
+/*   Updated: 2023/09/22 13:56:15 by avaganay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/Bureaucrat.hpp"
-#include "../include/Form.hpp"
+#include "../include/AForm.hpp"
 
 Bureaucrat::Bureaucrat(void): _name("X")
 {
