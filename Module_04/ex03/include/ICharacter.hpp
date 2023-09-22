@@ -6,7 +6,7 @@
 /*   By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 13:14:27 by avaganay          #+#    #+#             */
-/*   Updated: 2023/09/18 14:08:57 by avaganay         ###   ########.fr       */
+/*   Updated: 2023/09/19 11:37:43 by avaganay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,6 @@ protected:
 	std::string _name;
 	AMateria *_inventory[4];
 public:
-    // virtual ICharacter(void);
-    // virtual ICharacter(std::string name);
 	virtual ~ICharacter() {}
     virtual std::string const & getName() const = 0;
 	virtual void equip(AMateria* m) = 0;

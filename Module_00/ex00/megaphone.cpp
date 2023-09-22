@@ -6,7 +6,7 @@
 /*   By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/10 21:28:48 by axel              #+#    #+#             */
-/*   Updated: 2023/08/22 10:58:25 by avaganay         ###   ########.fr       */
+/*   Updated: 2023/06/11 11:50:01 by avaganay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int main(int argc, char **argv)
     j = 0;
     if (argc == 1)
         std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
-    else 
+    else
     {
         while (i < argc)
         {

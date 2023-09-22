@@ -6,7 +6,7 @@
 /*   By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/05 14:34:21 by axel              #+#    #+#             */
-/*   Updated: 2023/08/31 11:32:56 by avaganay         ###   ########.fr       */
+/*   Updated: 2023/09/18 16:00:59 by avaganay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ public:
     Dog(void);
     Dog(const Dog &copy);
     ~Dog(void);
+    Dog &operator=(const Dog &assignment);
     void    makeSound(void) const;
     Brain	*getBrain( void ) const;
 };

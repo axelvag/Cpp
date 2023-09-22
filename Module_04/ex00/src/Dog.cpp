@@ -6,7 +6,7 @@
 /*   By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/05 14:36:35 by axel              #+#    #+#             */
-/*   Updated: 2023/08/28 09:29:43 by avaganay         ###   ########.fr       */
+/*   Updated: 2023/09/18 15:30:42 by avaganay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,12 @@ Dog::Dog(const Dog &copy)
 Dog::~Dog(void)
 {
     std::cout << "Destructor Dog called" << std::endl;
+}
+
+Dog &Dog::operator=(const Dog &assignment)
+{
+	this->type = assignment.type;
+	return (*this);
 }
 
 void    Dog::makeSound(void) const

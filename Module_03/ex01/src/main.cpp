@@ -6,7 +6,7 @@
 /*   By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/31 13:37:28 by avaganay          #+#    #+#             */
-/*   Updated: 2023/08/23 15:11:07 by avaganay         ###   ########.fr       */
+/*   Updated: 2023/08/24 11:15:51 by avaganay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,9 @@ int main( void )
     std::cout << std::endl;
     ScavTrap guardian("Guardian");
     
-    guardian.attack("Troll");//il appel celui de claptrap erreur
+    guardian.attack("Troll");
+    guardian.takeDamage(5);
+    guardian.beRepaired(5);
     guardian.guardGate();
 
     return 0;

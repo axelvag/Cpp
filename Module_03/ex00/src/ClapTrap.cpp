@@ -6,7 +6,7 @@
 /*   By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/31 13:59:33 by avaganay          #+#    #+#             */
-/*   Updated: 2023/08/23 13:57:47 by avaganay         ###   ########.fr       */
+/*   Updated: 2023/08/24 08:33:04 by avaganay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,16 +46,6 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &assignment)
     this->_attack = assignment._attack;
     return (*this);
 }
-
-// std::ostream &operator<<(std::ostream &out, const ClapTrap &claptrap)
-// {
-//     out << "ClapTrap " << claptrap.getName();
-// }
-
-// const   std::string &ClapTrap::getName(void) const
-// {
-//     return this->_name;
-// }
 
 void ClapTrap::attack(const std::string& target)
 {

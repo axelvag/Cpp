@@ -6,7 +6,7 @@
 /*   By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/09 13:35:04 by avaganay          #+#    #+#             */
-/*   Updated: 2023/06/10 16:27:42 by avaganay         ###   ########.fr       */
+/*   Updated: 2023/06/14 13:18:57 by avaganay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ int main()
     int work;
     PhoneBook PhoneBook;
     std::string cmd;
-    // std::ifstream is;
     
     work = 1;
     PhoneBook.start();

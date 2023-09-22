@@ -6,7 +6,7 @@
 /*   By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/31 13:37:28 by avaganay          #+#    #+#             */
-/*   Updated: 2023/08/31 11:41:25 by avaganay         ###   ########.fr       */
+/*   Updated: 2023/09/19 15:04:56 by avaganay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,5 +61,11 @@ int main( void )
 	std::cout << std::endl;
 	for (int i = 0; i < 4; i++)
 		delete tab_animal[i];
+
+	std::cout << std::endl;
+	Dog basic;
+	{
+		Dog tmp = basic;
+	}
     return 0;
 }

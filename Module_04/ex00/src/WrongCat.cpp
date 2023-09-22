@@ -6,7 +6,7 @@
 /*   By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/05 14:36:35 by axel              #+#    #+#             */
-/*   Updated: 2023/08/28 09:10:48 by avaganay         ###   ########.fr       */
+/*   Updated: 2023/09/18 15:32:59 by avaganay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,12 @@ WrongCat::WrongCat(const WrongCat &copy)
 WrongCat::~WrongCat(void)
 {
     std::cout << "Destructor WrongCat called" << std::endl;
+}
+
+WrongCat &WrongCat::operator=(const WrongCat &assignment)
+{
+	this->type = assignment.type;
+	return (*this);
 }
 
 void    WrongCat::makeSound(void)

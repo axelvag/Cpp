@@ -6,7 +6,7 @@
 /*   By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/04 19:33:07 by axel              #+#    #+#             */
-/*   Updated: 2023/08/23 15:32:10 by avaganay         ###   ########.fr       */
+/*   Updated: 2023/08/24 11:16:24 by avaganay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ FragTrap &FragTrap::operator=(const FragTrap &assignment)
 
 void FragTrap::highFivesGuys(void)
 {
-    std::cout << "FragTrap " << this->_name << "touch your hand !!!!!! " << std::endl;
+    std::cout << "FragTrap " << this->_name << " touch your hand !!!!!! " << std::endl;
 }
 
 void FragTrap::attack(const std::string& target)

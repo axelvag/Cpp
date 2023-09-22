@@ -6,7 +6,7 @@
 /*   By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/28 09:49:17 by avaganay          #+#    #+#             */
-/*   Updated: 2023/08/31 11:32:43 by avaganay         ###   ########.fr       */
+/*   Updated: 2023/09/19 15:05:08 by avaganay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ class Brain
 {
     
 private:
-    std::string *ideas;
+    std::string ideas[100];
 public:
     Brain(void);
     ~Brain();

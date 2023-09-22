@@ -6,7 +6,7 @@
 /*   By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 14:55:41 by avaganay          #+#    #+#             */
-/*   Updated: 2023/09/18 14:07:37 by avaganay         ###   ########.fr       */
+/*   Updated: 2023/09/18 14:53:32 by avaganay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,21 @@ Character::Character(std::string name)
         this->_inventory[i] = NULL;
     for (int i = 0; i < 4; i++)
         this->_fall[i] = NULL;
+}
+
+Character::~Character(void)
+{
+    std::cout << "Destructor Character called" << std::endl;
+    for (int i = 0; i < 4; i++)
+    {
+        if (this->_inventory[i])
+            delete this->_inventory[i];
+    }
+    for (int i = 0; i < 4; i++)
+    {
+        if (this->_fall[i])
+            delete this->_fall[i];
+    }
 }
 
 Character::Character(const Character &copy)

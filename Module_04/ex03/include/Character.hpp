@@ -6,7 +6,7 @@
 /*   By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 14:55:43 by avaganay          #+#    #+#             */
-/*   Updated: 2023/09/18 14:50:51 by avaganay         ###   ########.fr       */
+/*   Updated: 2023/09/18 14:53:40 by avaganay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ private:
     AMateria *_inventory[4];
     AMateria *_fall[4];
 public:
-	~Character() {}
+	~Character();
     Character(void);
     Character(std::string name);
     Character(const Character &copy);
