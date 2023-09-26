@@ -19,13 +19,19 @@ class ConvertScal
 {
     
 private:
-    
+    int _type; //0 = unknow, 1 = char, 2 = int, 3 = float, 4 = double, 5 = inf, 6 = nan"
+    bool    _find_pars_type;
 public:
     ConvertScal(void);
     ~ConvertScal();
     ConvertScal(const ConvertScal &copy);
-    // ConvertScal &operator=(const ConvertScal &assignment);
-    // const std::string   &getName(void) const;
+    ConvertScal &operator=(const ConvertScal &copy);
+    bool    get_find_pars_type(void) const;
+    int     get_type(void) const;
+    void    pars_type(std::string src);
+    void    convert(std::string str);
+    void    print_char(std::string str) const;
+
 };
 
 #endif
