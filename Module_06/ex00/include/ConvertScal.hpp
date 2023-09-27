@@ -29,16 +29,17 @@ public:
     ~ConvertScal();
     ConvertScal(const ConvertScal &copy);
     ConvertScal &operator=(const ConvertScal &copy);
-    bool    get_find_pars_type(void) const;
-    int     get_type(void) const;
-    void    pars_type(std::string src);
+    bool    getFindParsType(void);
+    int     getType(void) const;
+    void    parsType(std::string src);
+    void    parsTypeNanInfChar(std::string str, int len);
     void    convert(std::string str);
-    void    print_char(std::string str) const;
-    void    print_int(std::string str) const;
-    void    print_float(std::string str) const;
-    void    print_double(std::string str) const;
-    void    print_inf(std::string str) const;
-    void    print_nan(std::string str) const;
+    static void    printChar(std::string str);
+    static void    printInt(std::string str);
+    static void    printFloat(std::string str);
+    static void    printDouble(std::string str);
+    static void    printInf(std::string str);
+    static void    printNan(std::string str);
 
 };
 

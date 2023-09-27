@@ -6,7 +6,7 @@
 /*   By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/07 20:16:48 by axel              #+#    #+#             */
-/*   Updated: 2023/09/27 14:12:27 by avaganay         ###   ########.fr       */
+/*   Updated: 2023/09/27 16:01:05 by avaganay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,22 +43,18 @@ ConvertScal &ConvertScal::operator=(const ConvertScal &assigment)
     return *this;
 }
 
-bool    ConvertScal::get_find_pars_type(void) const
+bool    ConvertScal::getFindParsType(void)
 {
     return (this->_find_pars_type);
 }
 
-int     ConvertScal::get_type(void) const
+int     ConvertScal::getType(void) const
 {
     return (this->_type);
 }
 
-void    ConvertScal::pars_type(std::string str)
+void    ConvertScal::parsTypeNanInfChar(std::string str, int len)
 {
-    int i = 0;
-    int len = str.length();
-    bool is_double = false;
-    
     if (str == "nan" || str == "nanf")
     {
         this->_type = 6;
@@ -77,6 +73,15 @@ void    ConvertScal::pars_type(std::string str)
         this->_find_pars_type = true;
         return ;
     }
+}
+
+void    ConvertScal::parsType(std::string str)
+{
+    int i = 0;
+    int len = str.length();
+    bool is_double = false;
+    
+    ConvertScal::parsTypeNanInfChar(str, len);
     if (str.at(0) == '-' || str.at(0) == '+')
         i++;
     while (i < len)
@@ -118,29 +123,29 @@ void ConvertScal::convert(std::string str)
             std::cout << "Wrong input: Impossible" << std::endl;
             break;
         case 1:
-            this->print_char(str);
+            this->printChar(str);
             break;
         case 2:
-            this->print_int(str);
+            this->printInt(str);
             break;
         case 3:
-            this->print_float(str);
+            this->printFloat(str);
             break;
         case 4:
-            this->print_double(str);
+            this->printDouble(str);
             break;
         case 5:
-            this->print_inf(str);
+            this->printInf(str);
             break;
         case 6:
-            this->print_nan(str);
+            this->printNan(str);
             break;
         default:
             std::cout << "Error" << std::endl;
     }
 }
 
-void ConvertScal::print_char(std::string str) const
+void ConvertScal::printChar(std::string str)
 {
     char c = str.at(0);
     
@@ -153,7 +158,7 @@ void ConvertScal::print_char(std::string str) const
     std::cout << "double: " << static_cast<double>(c) << std::endl;
 }
 
-void ConvertScal::print_int(std::string str) const
+void ConvertScal::printInt(std::string str)
 {
     int i = atoi(str.c_str());
     
@@ -164,11 +169,11 @@ void ConvertScal::print_int(std::string str) const
 	else
 		std::cout << "char: impossible" << std::endl;
 	std::cout << "int: " << str << std::endl;
-	std::cout << "float: " << std::fixed << std::setprecision(2) << static_cast<float>(i) << "f" << std::endl;
+	std::cout << "float: " << std::fixed << std::setprecision(1) << static_cast<float>(i) << "f" << std::endl;
 	std::cout << "double: " << static_cast<double>(i) << std::endl;
 }
 
-void ConvertScal::print_float(std::string str) const
+void ConvertScal::printFloat(std::string str)
 {
     double d = atof(str.c_str());
     int i = atoi(str.c_str());
@@ -190,7 +195,7 @@ void ConvertScal::print_float(std::string str) const
         std::cout << "double: " << d << std::endl;
 }
 
-void ConvertScal::print_double(std::string str) const
+void ConvertScal::printDouble(std::string str)
 {
     double d = atof(str.c_str());
     int i = atoi(str.c_str());
@@ -206,10 +211,13 @@ void ConvertScal::print_double(std::string str) const
         std::cout << "float: " << static_cast<float>(d) << ".0f" << std::endl;
     else
         std::cout << "float: " << static_cast<float>(d) << "f" << std::endl;
-    std::cout << "double: " << static_cast<double>(d) << std::endl;
+    if (d == static_cast<int>(d))
+        std::cout << "double: " << static_cast<double>(d) << ".0" << std::endl;
+    else
+        std::cout << "double: " << static_cast<double>(d) << std::endl;
 }
 
-void ConvertScal::print_inf(std::string str) const
+void ConvertScal::printInf(std::string str)
 {
     double d = atof(str.c_str());
 
@@ -219,7 +227,7 @@ void ConvertScal::print_inf(std::string str) const
     std::cout << "double: " << d << std::endl;
 }
 
-void ConvertScal::print_nan(std::string str) const
+void ConvertScal::printNan(std::string str)
 {
     double d = atof(str.c_str());
 
