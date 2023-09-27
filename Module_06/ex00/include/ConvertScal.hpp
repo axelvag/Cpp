@@ -14,6 +14,9 @@
 #define CONVERTSCAL_HPP
 
 #include <iostream>
+#include <string>
+#include <stdlib.h>
+#include <iomanip>
 
 class ConvertScal
 {
@@ -31,6 +34,11 @@ public:
     void    pars_type(std::string src);
     void    convert(std::string str);
     void    print_char(std::string str) const;
+    void    print_int(std::string str) const;
+    void    print_float(std::string str) const;
+    void    print_double(std::string str) const;
+    void    print_inf(std::string str) const;
+    void    print_nan(std::string str) const;
 
 };
 

@@ -6,7 +6,7 @@
 /*   By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/31 13:37:28 by avaganay          #+#    #+#             */
-/*   Updated: 2023/09/26 14:14:52 by avaganay         ###   ########.fr       */
+/*   Updated: 2023/09/27 13:52:26 by avaganay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,6 @@ int main(int argc, char **argv)
     std::string str = argv[1];
     ConvertScal scal;
     scal.pars_type(str);
-    std::cout << "find_pars_type: " << scal.get_find_pars_type() << std::endl;
-    std::cout << "type: " << scal.get_type() << std::endl;
-    
-    std::cout << std::endl;
     scal.convert(str);
 
     
