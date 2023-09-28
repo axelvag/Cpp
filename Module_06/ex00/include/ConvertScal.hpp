@@ -22,18 +22,15 @@ class ConvertScal
 {
     
 private:
-    int _type; //0 = unknow, 1 = char, 2 = int, 3 = float, 4 = double, 5 = inf, 6 = nan"
-    bool    _find_pars_type;
+
 public:
     ConvertScal(void);
     ~ConvertScal();
     ConvertScal(const ConvertScal &copy);
     ConvertScal &operator=(const ConvertScal &copy);
-    bool    getFindParsType(void);
-    int     getType(void) const;
-    void    parsType(std::string src);
-    void    parsTypeNanInfChar(std::string str, int len);
-    void    convert(std::string str);
+    static void    convert(std::string str, int _type);
+    static void    parsType(std::string src, int &_type, bool &_find_pars_type);
+    static void    parsTypeNanInfChar(std::string str, int len, int &_type, bool &_find_pars_type);
     static void    printChar(std::string str);
     static void    printInt(std::string str);
     static void    printFloat(std::string str);

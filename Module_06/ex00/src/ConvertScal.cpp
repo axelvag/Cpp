@@ -6,7 +6,7 @@
 /*   By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/07 20:16:48 by axel              #+#    #+#             */
-/*   Updated: 2023/09/27 16:01:05 by avaganay         ###   ########.fr       */
+/*   Updated: 2023/09/28 14:55:14 by avaganay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,11 @@
 ConvertScal::ConvertScal(void)
 {
     std::cout << "Default constructor ConvertScal called" << std::endl;
-    this->_find_pars_type = false;
-    this->_type = 0;
 }
 
 ConvertScal::ConvertScal(const ConvertScal &copy)
 {
     std::cout << "Copy constructor ConvertScal called" << std::endl;
-    this->_find_pars_type = copy._find_pars_type;
-    this->_type = copy._type;
     *this = copy;
 }
 
@@ -37,59 +33,48 @@ ConvertScal &ConvertScal::operator=(const ConvertScal &assigment)
     std::cout << "Assignation operator called" << std::endl;
     if (this != &assigment)
     {
-        this->_find_pars_type = assigment._find_pars_type;
-        this->_type = assigment._type;
+        (void)assigment;
     }
     return *this;
 }
 
-bool    ConvertScal::getFindParsType(void)
-{
-    return (this->_find_pars_type);
-}
-
-int     ConvertScal::getType(void) const
-{
-    return (this->_type);
-}
-
-void    ConvertScal::parsTypeNanInfChar(std::string str, int len)
+void    ConvertScal::parsTypeNanInfChar(std::string str, int len, int &_type, bool &_find_pars_type)
 {
     if (str == "nan" || str == "nanf")
     {
-        this->_type = 6;
-        this->_find_pars_type = true;
+        _type = 6;
+        _find_pars_type = true;
         return;
     }
     else if (str == "+inf" || str == "-inf" || str == "+inff" || str == "-inff")
     {
-        this->_type = 5;
-        this->_find_pars_type = true;
+        _type = 5;
+        _find_pars_type = true;
         return;
     }
     if (len == 1 && (str.at(0) < '0' || str.at(0) > '9'))
     {
-        this->_type = 1;
-        this->_find_pars_type = true;
+        _type = 1;
+        _find_pars_type = true;
         return ;
     }
 }
 
-void    ConvertScal::parsType(std::string str)
+void    ConvertScal::parsType(std::string str, int &_type, bool &_find_pars_type)
 {
     int i = 0;
     int len = str.length();
     bool is_double = false;
     
-    ConvertScal::parsTypeNanInfChar(str, len);
+    ConvertScal::parsTypeNanInfChar(str, len, _type, _find_pars_type);
     if (str.at(0) == '-' || str.at(0) == '+')
         i++;
     while (i < len)
     {
         if (str.at(i) == 'f' && (i + 1 == len) && std::isdigit(str.at(i - 1)))
         {
-            this->_type = 3;
-            this->_find_pars_type = true;
+            _type = 3;
+            _find_pars_type = true;
             return;
         }
         else if (str.at(i) == '.')
@@ -105,40 +90,40 @@ void    ConvertScal::parsType(std::string str)
     }
     if (is_double)
     {
-        this->_type = 4;
-        this->_find_pars_type = true;
+        _type = 4;
+        _find_pars_type = true;
     }
     else
     {
-        this->_type = 2;
-        this->_find_pars_type = true;
+        _type = 2;
+        _find_pars_type = true;
     }
 }
 
-void ConvertScal::convert(std::string str)
+void ConvertScal::convert(std::string str, int _type)
 {
-    switch (this->_type)
+    switch (_type)
     {
         case 0:
             std::cout << "Wrong input: Impossible" << std::endl;
             break;
         case 1:
-            this->printChar(str);
+            ConvertScal::printChar(str);
             break;
         case 2:
-            this->printInt(str);
+            ConvertScal::printInt(str);
             break;
         case 3:
-            this->printFloat(str);
+            ConvertScal::printFloat(str);
             break;
         case 4:
-            this->printDouble(str);
+            ConvertScal::printDouble(str);
             break;
         case 5:
-            this->printInf(str);
+            ConvertScal::printInf(str);
             break;
         case 6:
-            this->printNan(str);
+            ConvertScal::printNan(str);
             break;
         default:
             std::cout << "Error" << std::endl;

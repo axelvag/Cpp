@@ -6,28 +6,38 @@
 /*   By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/31 13:37:28 by avaganay          #+#    #+#             */
-/*   Updated: 2023/09/27 16:07:26 by avaganay         ###   ########.fr       */
+/*   Updated: 2023/09/28 13:39:52 by avaganay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include "../include/ConvertScal.hpp"
+#include "../include/Serializer.hpp"
 
-int main(int argc, char **argv)
+int main(void)
 {
-    int _type; //0 = unknow, 1 = char, 2 = int, 3 = float, 4 = double, 5 = inf, 6 = nan"
-    bool    _find_pars_type;
-    
-    if (argc != 2)
-    {
-        std::cout << "Wrong number of arguments" << std::endl;
-        return (1);
-    }
-    std::string str = argv[1];
-    ConvertScal scal;
-    scal.parsType(str,_type,_find_pars_type);
-    scal.convert(str,_type);
 
+    Data	*data = new Data();
+	data->str = "GOOD?";
+
+	std::cout << "Data member: " << data->str << std::endl;
+	std::cout << "Address: " << data << std::endl;
+
+    std::cout << std::endl;
+	std::cout << "!Serialized!" << std::endl;
+	uintptr_t	raw = Serializer::serialize(data);
+    std::cout << std::endl;
+    std::cout << "Data member: " << raw << std::endl;
+	std::cout << "Address: " << data << std::endl;
+	
+    std::cout << std::endl;
+    std::cout << "!Deserialize!" << std::endl;
+    data = Serializer::deserialize(raw);
+    
+    std::cout << std::endl;
+	std::cout << "Data member: " << data->str << std::endl;
+	std::cout << "Address: " << data << std::endl;
+
+	delete data;
     
     return (0);
 }
