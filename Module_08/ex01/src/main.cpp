@@ -6,11 +6,14 @@
 /*   By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/10 14:40:20 by axel              #+#    #+#             */
-/*   Updated: 2023/10/02 17:22:23 by avaganay         ###   ########.fr       */
+/*   Updated: 2023/10/02 17:53:23 by avaganay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/Span.hpp"
+#include <exception>
+#include <vector>
+
 
 int main(void)
 {
