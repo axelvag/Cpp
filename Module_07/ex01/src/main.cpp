@@ -3,20 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: axel <axel@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/10 14:40:20 by axel              #+#    #+#             */
-/*   Updated: 2023/08/10 19:06:52 by axel             ###   ########.fr       */
+/*   Updated: 2023/10/02 11:25:29 by avaganay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/iter.hpp"
-
-template <typename T>
-void    ft_iter(T val)
-{
-    std::cout << val << std::endl;
-}
 
 int main(void)
 {   

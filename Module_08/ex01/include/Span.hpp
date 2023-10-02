@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   span.hpp                                           :+:      :+:    :+:   */
+/*   Span.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: axel <axel@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/12 20:06:44 by axel              #+#    #+#             */
-/*   Updated: 2023/08/12 20:07:04 by axel             ###   ########.fr       */
+/*   Updated: 2023/10/02 17:25:07 by avaganay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,18 @@
 #define SPAN_HPP
 
 #include <iostream>
+
+class Span
+{
+private:
+    unsigned int _n;
+public:
+    Span(void) {_n = 0;};
+    Span(unsigned int n);
+    ~Span(void) {};
+    Span(Span const &copy);
+};
+
 
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/31 13:37:28 by avaganay          #+#    #+#             */
-/*   Updated: 2023/09/28 16:10:56 by avaganay         ###   ########.fr       */
+/*   Updated: 2023/10/02 11:10:09 by avaganay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,10 @@
 int main(void)
 {
     Base *base = Base::generate();
-    (void)base;
+
     Base::identify(base);
+    Base::identify(*base);
+    delete base;
     
     return (0);
 }
