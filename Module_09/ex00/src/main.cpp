@@ -6,7 +6,7 @@
 /*   By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/10 14:40:20 by axel              #+#    #+#             */
-/*   Updated: 2023/10/04 11:59:04 by avaganay         ###   ########.fr       */
+/*   Updated: 2023/10/05 15:17:30 by avaganay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@ int main(int ac, char **av)
         std::cout << "Usage: ./btc [file]" << std::endl;
         return (1);
     }
-    (void)av;
     try
     {
         Bitcoin data = Bitcoin("data.csv");
+        data.parsInput(av[1]);
     }
     catch(const std::exception& e)
     {
