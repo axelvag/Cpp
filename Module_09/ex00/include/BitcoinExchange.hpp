@@ -6,7 +6,7 @@
 /*   By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 10:13:36 by avaganay          #+#    #+#             */
-/*   Updated: 2023/10/05 16:17:57 by avaganay         ###   ########.fr       */
+/*   Updated: 2023/10/09 14:28:39 by avaganay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Bitcoin
 {
 
 private:
-    std::map<std::string, float> _map;
+    std::map<std::string, double> _map;
     
 public:
     Bitcoin();
@@ -36,9 +36,10 @@ public:
     int isOnlyDigit(std::string str);
     void parseData(std::ifstream &data);
     void parseDataLine(std::string &date, std::string &price);
-    void DataIsValid(std::string date, std::string price);
-    int DateIsValid(std::string date);
-    void isLeapYear(const int y, const int m, const int d);
+    void dataIsValid(std::string date, std::string price);
+    int dateIsValid(std::string date);
+    int isLeapYear(const int y, const int m, const int d);
+    int numberIsValid(std::string nb);
 
     void    parsInput(const std::string input);
     void    calculate(const std::string line);
@@ -51,14 +52,28 @@ public:
     {
         virtual const char* what() const throw()
         {
-            return ("[File Error]");
+            return ("Error: bad input");
         }
     };
     class DataError : public std::exception
     {
         virtual const char* what() const throw()
         {
-            return ("[Data Error]");
+            return ("Error: Data Error]");
+        }
+    };
+    class NegativeNumberError : public std::exception
+    {
+        virtual const char* what() const throw()
+        {
+            return ("Error: not a positive number.");
+        }
+    };
+    class LargeNumberError : public std::exception
+    {
+        virtual const char* what() const throw()
+        {
+            return ("Error: too large a number.");
         }
     };
 
