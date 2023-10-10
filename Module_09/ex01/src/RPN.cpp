@@ -6,7 +6,7 @@
 /*   By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 10:13:29 by avaganay          #+#    #+#             */
-/*   Updated: 2023/10/10 11:33:15 by avaganay         ###   ########.fr       */
+/*   Updated: 2023/10/10 12:56:19 by avaganay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,15 +32,26 @@ RPN &RPN::operator=(const RPN &assigment)
     return (*this);
 }
 
+int RPN::isOperator(char c)
+{
+    if (c == '+' || c == '-' || c == '*' || c == '/')
+        return (1);
+    return (0);
+}
+
 void RPN::parseCalc(std::string line)
 {
     size_t i = 0;
 
     while (i < line.length())
     {
-        if (i % 2 == 0 && std::isdigit(line.at(i)))
+        if (line.at(i) != ' ' && !std::isdigit(line.at(i)) && !isOperator(line.at(i)))
+            throw (InvalidCalc());
+        else if (i % 2 == 1 && line.at(i) != ' ')
+            throw (InvalidCalc());
+        else if (i % 2 == 0 && std::isdigit(line.at(i)))
             _stack.push(line.at(i) - '0');
-        else if (i % 2 == 0 && (line.at(i) == '+' || line.at(i) == '-' || line.at(i) == '*' || line.at(i) == '/'))
+        else if (i % 2 == 0 && isOperator(line.at(i)))
             calculate(line.at(i));
         i++;
     }
@@ -51,28 +62,22 @@ void RPN::parseCalc(std::string line)
 
 void RPN::calculate(char op)
 {
+    if (_stack.size() < 2)
+        throw (InvalidCalc());
     int a = _stack.top();
     _stack.pop();
     int b = _stack.top();
     _stack.pop();
     if (op == '+')
-    {
-        std::cout << a << " + " << b << std::endl;
         _stack.push(a + b);
-    }
     else if (op == '-')
-    {
-        std::cout << b << " - " << a << std::endl;
         _stack.push(b - a);
-    }
     else if (op == '*')
-    {
-        std::cout << a << " * " << b << std::endl;
         _stack.push(a * b);
-    }
     else if (op == '/')
     {
-        std::cout << b << " / " << a << std::endl;
+        if (a == 0)
+            throw (InvalidCalc());
         _stack.push(b / a);
     }
 }

@@ -6,7 +6,7 @@
 /*   By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 10:13:36 by avaganay          #+#    #+#             */
-/*   Updated: 2023/10/10 11:31:39 by avaganay         ###   ########.fr       */
+/*   Updated: 2023/10/10 12:44:52 by avaganay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ public:
     RPN &operator=(const RPN &assigment);
     void parseCalc(std::string line);
     void calculate(char op);
+    int isOperator(char c);
 
     class InvalidCalc : public std::exception
     {
