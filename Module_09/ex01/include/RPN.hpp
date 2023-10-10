@@ -6,12 +6,12 @@
 /*   By: avaganay <avaganay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 10:13:36 by avaganay          #+#    #+#             */
-/*   Updated: 2023/10/10 12:44:52 by avaganay         ###   ########.fr       */
+/*   Updated: 2023/10/10 12:59:15 by avaganay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BITCOINEXCHANGE_HPP
-#define BITCOINEXCHANGE_HPP
+#ifndef RPN_HPP
+#define RPN_HPP
 
 #include <iostream>
 #include <algorithm>
