@@ -20,24 +20,8 @@
 #include <deque>
 #include <fstream>
 #include <string>
-
-// class PmergeMe
-// {
-
-// private:
-//     std::vector<int> _vector;
-//     std::deque<int> _deque;
-// public:
-//     PmergeMe();
-//     ~PmergeMe();
-//     PmergeMe(const PmergeMe &copy);
-//     PmergeMe &operator=(const PmergeMe &assigment);
-//     std::vector<int> getVector(void) const;
-//     std::deque<int>  getDeque(void) const;
-//     void setVector(std::vector<int> vector);
-//     void setDeque(std::deque<int> deque);
-
-// };
+#include <ctime>
+#include <iomanip>
 
 template <typename T>
 void algoTemplate(T &container);
@@ -52,13 +36,18 @@ class ParseError : public std::exception
     }
 };
 
-
 template <typename T>
 void printContainerTemplate(T &container)
 {
     for (size_t i = 0; i < container.size(); i++)
         std::cout << container[i] << " ";
     std::cout << std::endl;
+}
+
+template <typename T>
+void printClockTemplate(T &container, double time)
+{
+    std::cout << "Time to process a range of " << container.size() << " elements: " << time << " us" << std::endl;
 }
 
 template <typename T>
@@ -84,7 +73,7 @@ void algoTemplate(T &container)
     typename T::iterator middle = container.begin();
 
     std::advance(middle, container.size() / 2);
-    if (container.size() < 2)
+    if (container.size() < 20)
     {
         insertionSortTemplate(container);
         return;
@@ -109,6 +98,5 @@ void insertionSortTemplate(T &container)
         }
     }
 }
-
 
 #endif
