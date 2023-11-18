@@ -8,11 +8,11 @@ All of those exercises are compilable with the `-std=c++98`-flag, since this was
 
 ## Installation
 
-Use `git clone` for clone the repo.
-Enter in the file of your choice `cd Module_0.../`.
-Then enter in a exercice `cd ex0.../`.
-And `make` the project.
-Finaly, use `./Name_of_the_executable` for throw the code.
+Use `git clone` for clone the repo. <br>
+Enter in the file of your choice `cd Module_0.../`. <br>
+Then enter in a exercice `cd ex0.../`. <br>
+And `make` the project. <br>
+Finaly, use `./Name_of_the_executable` for throw the code. <br>
 
 ### --------------------------------------PROJECT 00--------------------------------------
 
