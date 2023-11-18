@@ -6,6 +6,14 @@ C++ is a general-purpose programming language created by Bjarne Stroustrup as an
 This project was my first contact to write programms in C++.<br>
 All of those exercises are compilable with the `-std=c++98`-flag, since this was a requirement for this project.<br>
 
+## Installation
+
+Use `git clone` for clone the repo.
+Enter in the file of your choice `cd Module_0.../`.
+Then enter in a exercice `cd ex0.../`.
+And `make` the project.
+Finaly, use `./Name_of_the_executable` for throw the code.
+
 ### --------------------------------------PROJECT 00--------------------------------------
 
 ## Exercise 00
@@ -119,9 +127,9 @@ This exercise aims to replicate the basic performance of the **sed** command (**
 
 Note: the example above shows how the replace operation is reversible (unsurprisingly).
 
-## ex05. Karen 2.0
+## ex05. Karen-Harl 2.0
 
-The next two exercises expand on the idea of refernces a bit further. We create a **Karen** class that can give various messages of types **DEBUG**, **INFO**, **WARNING** and **ERROR**. We are asked to create that outputs the proper message depending message type.
+The next two exercises expand on the idea of refernces a bit further. We create a **Karen/Harl** class that can give various messages of types **DEBUG**, **INFO**, **WARNING** and **ERROR**. We are asked to create that outputs the proper message depending message type.
 
 ### Example
 
@@ -130,9 +138,13 @@ The next two exercises expand on the idea of refernces a bit further. We create 
     <img src="https://user-images.githubusercontent.com/40824677/189335932-cc2a47f6-d0b1-4030-93ca-e714a4a2d6ab.png">
 </div>
 
-## ex06. Karen-filter
+You can compile this project with `make` or `make re`.<br>
+Then use it with `./Harl`
+
+## ex06. Karen-Harl-filter
 
 This last exercise is an extension of the previous one. However this time we receive the message type from the user and output that type's message and all the message types above it (order is **DEBUG** < **INFO** < **WARNING** < **ERROR**). We must coordinate the responses using switches for this exercise.
+So you need to use a "switch" for two reason, first to don't use a forest of (if, else if, else) and second for execute all function below the good one !
 
 ### Example
 
@@ -142,11 +154,8 @@ This last exercise is an extension of the previous one. However this time we rec
 
 Note how the **DEBUG** message is not shown because it is below **INFO**.
 
-## Installation
+You can compile this project with `make` or `make re`.<br>
+Then use it with `./Harl "Argument_you_want_between_INFO_DEBUG_ERROR_WARNING"`
 
-For this project and fututre C++ projects it is only required to have `clang` and/or `gcc`, which provide their respective compilers `clang++` and `g++`. It is also recommended to install the `valgrind` package on **Linux** for debugging purposes. Every exercise (unless specified otherwise) includes its own Makefile with the necessary instructions. In some cases certain tweaks needed to be made to ensure the most similar results in both **Linux** and **MacOS**.
-
-## Summary
-This one was definitely harder than the previous one, but it was still pretty fun.
 
 ### --------------------------------------PROJECT 02--------------------------------------
