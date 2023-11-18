@@ -1,12 +1,12 @@
-# Cpp
-
-### --------------------------------------PROJECT 00--------------------------------------
+# Cpp Project 00 -> 09
 
 ## In general
 
 C++ is a general-purpose programming language created by Bjarne Stroustrup as an extension of the C programming language, or "C with Classes" (source: [Wikipedia](https://en.wikipedia.org/wiki/C++)).<br><br>
 This project was my first contact to write programms in C++.<br>
 All of those exercises are compilable with the `-std=c++98`-flag, since this was a requirement for this project.<br>
+
+### --------------------------------------PROJECT 00--------------------------------------
 
 ## Exercise 00
 
