@@ -217,18 +217,193 @@ The third exercise introduces yet another class, FragTrap, which also inherits f
 
 ### --------------------------------------PROJECT 04--------------------------------------
 
+## Ex00 - Animals
+In the first exercise, we must implement a simple class, Animal, and its two derived classes, Dog and Cat. All classes have their own makeSound function which displays a different message depending on the animal. We must manipulate cats and dogs through pointers of their parent class, Animal, and ensure that the sounds they make are appropriate to their type. 
+
+### Usage
+Clone this repository and `cd` into `cpp04/ex00`. Then `make` to compile. Run the program with:
+
+```
+./animal
+```
+The output shows the results of a functionality test.
+
+## Ex01 - Animals with brains
+The second exercise builds on the first by implementing another class, Brain. Cat and Dog instances will have a Brain which can contain up to 100 ideas. Copies of Dogs and Cats musn't be shallow, and there should be no memory leaks. 
+
+### Usage
+Clone this repository and `cd` into `cpp04/ex01`. Then `make` to compile. Run the program with:
+
+```
+./animal
+```
+
+## Ex02 - Abstract animals
+The third exercise introduces us to the concept of abstract classes. The Animal base class should no longer be instantiable.
+
+### Usage
+Clone this repository and `cd` into `cpp04/ex02`. Then `make` to compile. Run the program with:
+
+```
+./animal
+```
+To check that the Animal class is no longer instantiable, uncomment the commented test in `cpp04/ex02/sources/main.c`. The program should no longer compile.
+
+## Ex03 - Materias
+The fourth and last exercise in the series requires the implementation of pure abstract classes: interfaces. The Character class is implemented according to the ICharacter interface. A character has an inventory of up to 4 materia which can be equipped, unequipped or used. A materia can be one of two types: ice or cure. Materias are created with a MateriaSource class which implements the IMateriaSource interface.
+
+### Usage
+Clone this repository and `cd` into `cpp04/ex03`. Then `make` to compile. Run the program with:
+
+```
+./materia
+```
 
 ### --------------------------------------PROJECT 05--------------------------------------
 
+## Ex00 - Bureaucrats
+In the first exercise, we must implement a simple class, Bureaucrat. The Bureaucrat's highest possible grade is 1 and its lowest is 150. Attempting to construct a Bureaucrat with a grade that is either too high or too low should throw the appropriate exception. The same is true when a Bureaucrat's grade increases or decreases.
+
+### Usage
+Clone this repository and `cd` into `cpp05/ex00`. Then `make` to compile. Run the program with:
+
+```
+./bureaucrat
+```
+The output shows the results of a functionality test.
+
+## Ex01 - Forms
+The second exercise builds on the first by implementing another class, Form. Forms start off unsigned and require a certain grade to be signed and to be executed. If a form grade is out of bounds, the appropriate exception must be thrown.
+
+### Usage
+Clone this repository and `cd` into `cpp05/ex01`. Then `make` to compile. Run the program with:
+
+```
+./bureaucrat
+```
+
+## Ex02 - More Forms!
+The third exercise asks us to extend the variety of our forms. The Form class becomes abstract, and three specific forms will inherit from it: the Shrubbery Creation Form, the Robotomy Request Form, and the Presidential Pardon Form. Each have different grades required to sign and execute them, as well as their own effects. 
+
+### Usage
+Clone this repository and `cd` into `cpp05/ex02`. Then `make` to compile. Run the program with:
+
+```
+./bureaucrat
+```
+
+## Ex03 - Interns
+The fourth and last exercise in the series builds on the previous ones. A new class, Intern, although it has no grade and no unique characteristics, has the ability to create each of the previously-defined forms. Of course, exceptions will be thrown if the requested form cannot be created.
+
+### Usage
+Clone this repository and `cd` into `cpp05/ex03`. Then `make` to compile. Run the program with:
+
+```
+./bureaucrat
+```
 
 ### --------------------------------------PROJECT 06--------------------------------------
 
+## Ex00 - Scalar Type Conversion
+In the first exercise, we must create a program able to static cast a given literal from one scalar type (char, int, float or double) to each of the 3 others.
+
+### Usage
+Clone this repository and `cd` into `cpp06/ex00`. Then `make` to compile. Run the program with:
+
+```
+./convert_scalar <char>
+./convert_scalar <int>
+./convert_scalar <float>f
+./convert_scalar <double>
+./convert_scalar <inf, inff, -inf, -inff, or nan>
+```
+The output shows the results of the conversion to each of the types. (Note that floats and double must both contain a floating point, and floats must be indicated with a trailling 'f').
+
+## Ex01 - Serialization
+In the second exercise, we must create a simple program able to serialize and deserialize a pointer to a class instance thanks to a reinsterpret cast.
+
+### Usage
+Clone this repository and `cd` into `cpp06/ex01`. Then `make` to compile. Run the program with:
+
+```
+./serializer
+```
+
+## Ex02 - Identify
+The third exercise asks us to create a program which randomly instantiates one of three derived classes as their parent base class pointer. Then, the program must be able to identify which of the three derived classes the pointer points to, using dynamic casting. It must also be able to identify the class by reference instead of by pointer.
+
+### Usage
+Clone this repository and `cd` into `cpp06/ex02`. Then `make` to compile. Run the program with:
+
+```
+./identifier
+```
 
 ### --------------------------------------PROJECT 07--------------------------------------
 
+## Ex00 - Swap, Min & Max
+In the first exercise, we must create simple template functions. These are swap, which swaps the values of two given arguments, min which returns the smallest of two arguments, and max which does the opposite. These functions can be called with any type of argument, be it an int, a float, a char, a string, etc.
+
+### Usage
+Clone this repository and `cd` into `cpp07/ex00`. Then `make` to compile. Run the program with:
+
+```
+./whatever
+```
+The output shows the results of functionality tests.
+
+## Ex01 - Iter
+For the second exercise, we must implement a function template able to call a function on every element of an array. The array can be of any type.
+
+### Usage
+Clone this repository and `cd` into `cpp07/ex01`. Then `make` to compile. Run the program with:
+
+```
+./iter
+```
+
+## Ex02 - Array
+For the third exercise, we must implement a class template Array, which contains elements of type T. Memory must be allocated and a subscript operator [] must be defined to access array elements. Of course, this class should work with any variable type (int, char, string, float, etc.)
+
+### Usage
+Clone this repository and `cd` into `cpp07/ex02`. Then `make` to compile. Run the program with:
+
+```
+./array_template
+```
 
 ### --------------------------------------PROJECT 08--------------------------------------
 
+## Ex00 - Easyfind
+In the first exercise, we must create a simple template function, easyfind, which finds the first occurence of an integer in a container, whether it be a vector, a deque, a list...
+
+### Usage
+Clone this repository and `cd` into `cpp08/ex00`. Then `make` to compile. Run the program with:
+
+```
+./easyfind
+```
+The output shows the results of functionality tests.
+
+## Ex01 - Span
+In the second exercise, we must implement a Span class that can store integers. Using iterators and algorithm functions, it must be able to add a number or a range of numbers to its container. It must also be able to calculate the shortest and the longest span within the numbers it stores.
+
+### Usage
+Clone this repository and `cd` into `cpp08/ex01`. Then `make` to compile. Run the program with:
+
+```
+./span
+```
+
+## Ex02 - MutantStack
+The third exercise requires us to create a new container called MutantStack, which adds iterator functionality to the standard `std::stack` container.
+
+### Usage
+Clone this repository and `cd` into `cpp08/ex02`. Then `make` to compile. Run the program with:
+
+```
+./mutantStack
+```
 
 ### --------------------------------------PROJECT 09--------------------------------------
 
