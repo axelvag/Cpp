@@ -16,7 +16,15 @@ Finaly, use `./Name_of_the_executable` for throw the code.
 
 ### --------------------------------------PROJECT 00--------------------------------------
 
-## Exercise 00
+### Table of Contents
+
+- [ex00. Megaphone](#Exercise-00---Megaphone)
+
+- [ex01. Phonebook](#Exercise-01---Phonebook)
+
+- [Installation](#installation)
+
+## Exercise 00 - Megaphone
 
 The Goal of this exercise was to write a really simple c++ style programm, but without any classes yet, just to get familiar with the use of i.e. `std::cout`.
 You enter a string and it return this string but in capital letter !
@@ -25,7 +33,7 @@ You can compile this project with `make` or `make re`.<br>
 Then use it with `./megaphone "Argument_you_want_to_change_to_all_CAPS"`
 
 
-## Exercise 01
+## Exercise 01 - Phonebook
 
 This subject was a little more sophisticated than the one before.<br>
 First time using classes.<br>
@@ -65,7 +73,6 @@ After that, just follow the instructions of the phonebook.<br>
 - [ex06. Karen-filter](#ex06-karen-filter)
 	* [Example](#example-6)
 - [Installation](#installation)
-- [Summary](#summary)
 
 ## Introduction
 
