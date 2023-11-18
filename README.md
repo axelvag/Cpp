@@ -166,3 +166,51 @@ Then use it with `./Harl "Argument_you_want_between_INFO_DEBUG_ERROR_WARNING"`
 
 
 ### --------------------------------------PROJECT 02--------------------------------------
+
+## Ex00 - Fixed Class
+Because floating point types lack accuracy and can be slow, we must implement a new class for Fixed point numbers. This exercise is an introduction to the Orthodox Canonical form, in which a class should have a default constructor, a copy constructor, a destructor and an assignment operator overload.
+
+```
+./fixed
+```
+
+The output shows the sequence of calls to constructors, destructors, assignment operators and getters.
+
+## Ex01 - A More Useful Fixed Class
+This exercise builds on the previous one. Now we must add an output stream overload to the class, as well as new constructors from int and float and member functions able to translate a Fixed number into an integer or a float.
+
+```
+./fixed
+```
+
+## Ex02 - Overload Madness
+The third exercise, again, builds on the previous one. Now we must implement overloads for all operators (comparison < > <= >= == !=, binary + - * /, unary prefix++ ++postfix prefix-- postfix--) as well as regular and const versions of functions that return the largest or smallest of two fixed numbers.
+
+```
+./fixed
+```
+
+
+### --------------------------------------PROJECT 03--------------------------------------
+
+## Ex00 - ClapTrap
+In the first exercise, we must implement a simple class, ClapTrap, which has the ability to attack, take damage and be repaired. The class also has private attributes: a name, hit points, energy points and attack damage.
+
+```
+./trap
+```
+The output shows the results of a functionality test.
+
+## Ex01 - ScavTrap
+The second exercise builds on the first by implementing another class, ScavTrap, which inherits from the previously created ClapTrap class and implements some new functionality, guardGate. ScavTrap also has different default values in its hit points, energy points and attack damage attributes.
+
+```
+./trap
+```
+
+## Ex02 - FragTrap
+The third exercise introduces yet another class, FragTrap, which also inherits from the ClapTrap class and also has its own functionality, highFivesGuys. FragTrap also has different default values in its hit points, energy points and attack damage attributes compared to both ClapTrap and ScavTrap.
+
+```
+./trap
+```
