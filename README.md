@@ -8,7 +8,8 @@ All of those exercises are compilable with the `-std=c++98`-flag, since this was
 
 ## Installation
 
-Use `git clone` for clone the repo. <br>
+Use `git clone htpps://github.com/axelvag/Cpp` for clone the repo. <br>
+Acces the repo `cd Cpp`. <br>
 Enter in the file of your choice `cd Module_0.../`. <br>
 Then enter in a exercice `cd ex0.../`. <br>
 And `make` the project. <br>
